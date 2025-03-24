@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Template | Navbar</title>
+</head>
+<body class="font-[poppins]">
+    <div class="bg-white py-4 px-6 shadow flex justify-between items-center">
+        <div class="flex items-center text-lg font-bold text-green-500">
+            <span>LOGO</span>
+        </div>
+        <div class="text-sm hidden md:flex items-center gap-6">
+            <a href="#" class="relative group">
+                <span>Menu</span>
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="relative group">
+                <span>Menu</span>
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="relative group">
+                <span>Menu</span>
+                <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full">
+                <span>Sign in</span>
+            </a>
+        </div>
+        <button class="md:hidden block text-gray-700 focus:outline-none" id="menu-btn">
+            ☰
+        </button>
+    </div>
+    <div class="hidden flex flex-col items-center gap-4 py-4 md:hidden bg-white shadow-md" id="mobile-menu">
+        <a href="#" class="relative group">
+            <span>Menu</span>
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="relative group">
+            <span>Menu</span>
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="relative group">
+            <span>Menu</span>
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full">
+            <span>Sign in</span>
+        </a>
+    </div>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
