@@ -8,13 +8,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>SideBar - 1</title>
+    <title>SideBar - Dropdown</title>
 </head>
 <body class="font-[poppins]">
-    <div class="flex top-0 left-0 sticky bg-white shadow w-80 h-screen">
-        <div class="flex gap-2 items-center">
-            <div class=""></div>
+    <div class="flex flex-col top-0 left-0 sticky bg-white shadow w-64 h-screen">
+        <div class="flex items-center gap-2 justify-left p-6">
+            <a href="#" class="flex w-10">
+                <img src="https://i.pinimg.com/736x/29/b8/d2/29b8d250380266eb04be05fe21ef19a7.jpg" alt="foto" class="rounded-full">
+            </a>
+            <div class="grid -space-y-1">
+                <span class=" text-sm font-bold">Username</span>
+                <span class="text-xs">email@gmail.com</span>
+            </div>
+        </div>
+        <hr class="mx-4 border-neutral-300">
+        <div class="flex flex-col px-4 py-6 gap-2">
+            <a href="#" class="text-sm flex items-center gap-2 bg-white text-black py-2 px-4 rounded hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.6)] hover:font-semibold hover:text-white hover:bg-green-500 transition-all duration-100 ease-in-out">
+                <i class="fa-solid fa-gear font-semibold"></i>
+                <span>Menu</span>
+            </a>
+            <a href="#" class="text-sm flex items-center gap-2 bg-white text-black py-2 px-4 rounded hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.6)] hover:font-semibold hover:text-white hover:bg-green-500 transition-all duration-100 ease-in-out">
+                <i class="fa-solid fa-gear font-semibold"></i>
+                <span>Menu</span>
+            </a>
+            <a href="#" class="text-sm flex items-center gap-2 bg-white text-black py-2 px-4 rounded hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.6)] hover:font-semibold hover:text-white hover:bg-green-500 transition-all duration-100 ease-in-out">
+                <i class="fa-solid fa-gear font-semibold"></i>
+                <span>Menu</span>
+            </a>
+            <div class="relative">
+                <button id="dropdownButton" onclick="toggleDropdown()" class="text-sm flex items-center gap-2 bg-white text-black py-2 px-4 rounded w-full hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.6)] hover:font-semibold hover:text-white hover:bg-green-500 transition-all duration-100 ease-in-out">
+                    <i class="fa-solid fa-bars font-semibold"></i>
+                    <span>Menu</span>
+                    <i class="fa-solid fa-chevron-down ml-auto"></i>
+                </button>
+                <div id="dropdownMenu" class="hidden flex flex-col bg-white mt-2 overflow-hidden">
+                    <a href="#" class="px-4 py-2 text-sm rounded hover:bg-green-100 hover:text-green-500">Submenu 1</a>
+                    <a href="#" class="px-4 py-2 text-sm rounded hover:bg-green-100 hover:text-green-500">Submenu 2</a>
+                    <a href="#" class="px-4 py-2 text-sm rounded hover:bg-green-100 hover:text-green-500">Submenu 3</a>
+                </div>
+            </div>
+            <hr class="mx-4 border-neutral-300">
+            <a href="#" class="text-sm flex items-center gap-2 bg-white text-black py-2 px-4 rounded hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.6)] hover:font-semibold hover:text-white hover:bg-green-500 transition-all duration-100 ease-in-out">
+                <i class="fa-solid fa-door-open font-semibold"></i>
+                <span>Logout</span>
+            </a>
         </div>
     </div>
+
+    <script>
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+            let button = document.getElementById("dropdownButton");
+
+            dropdown.classList.toggle("hidden");
+            button.classList.toggle("bg-green-500");
+            button.classList.toggle("text-white");
+            button.classList.toggle("font-semibold");
+            button.classList.toggle("drop-shadow-[0_0_5px_rgba(34,197,94,0.6)]");
+        }
+    </script>
 </body>
 </html>
